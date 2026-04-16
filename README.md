@@ -37,8 +37,8 @@ local function setup(part)
 end
 ```
 
-Supported types:
-```luau
+# Supported types:
+
 Instance :Destroy()
 RBXScriptConnection :Disconnect()
 thread task.cancel()
