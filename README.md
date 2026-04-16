@@ -4,6 +4,7 @@ luau
 A lightweight cleanup utility for Roblox/Luau. Soap keeps track of objects like Instances, connections, threads, tweens, and functions — and destroys them all at once when you're done.
 
 # 🚀 Quick Start
+```luau
 lualocal soap = Soap.New()
 
 local part = Instance.new("Part")
@@ -14,9 +15,10 @@ soap:Add(part, connection, thread)
 
 -- Later, when you're done:
 soap:Cleanup()
-
+```
 
 # 🧪 Example
+```luau
 local Soap = require(path.to.Soap)
 
 local function setup(part)
@@ -33,11 +35,7 @@ local function setup(part)
 
     return soap
 end
-
-local soap = setup(workspace.Part)
-
--- When the part is no longer needed:
-soap:Destroy()
+```
 
 # 📝 Notes
 
