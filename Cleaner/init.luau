@@ -1,10 +1,8 @@
---!strict
+local types = require(script.type)
 
 local Module = {}
 local Api = {}
 Api.__index = Api
-
---//
 
 local function isSafeTable(t)
 	return typeof(t) == "table" and getmetatable(t) == nil
@@ -55,11 +53,11 @@ function Api:Cleanup()
 	return
 end
 
-function Module.New()
-	local self = setmetatable({}, Api)
+export type SoapObject = typeof(setmetatable({}, Api))
 
-	return self
+function Module.New()
+    local self = setmetatable({}, Api)
+    return self :: types.SoapObject 
 end
 
 return Module
-```
