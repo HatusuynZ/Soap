@@ -48,13 +48,6 @@ end
 | `Tween` | `:Cancel()` |
 | `table` (nested) | recursively cleaned |
 
-Instance :Destroy()
-RBXScriptConnection
-thread task.cancel() --
-function called with no arguments --
-Tween :Cancel() --
-table recursively cleaned --
-
 # 📝 Notes
 
 Nested tables are supported: if you add a table, Soap will recursively clean its contents.
