@@ -1,3 +1,5 @@
+```luau
+
 --!strict
 
 local Module = {}
@@ -62,3 +64,4 @@ function Module.New()
 end
 
 return Module
+```
