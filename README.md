@@ -38,7 +38,13 @@ end
 ```
 
 Supported types:
-TypeAction on cleanupInstance:Destroy()RBXScriptConnection:Disconnect()threadtask.cancel()functioncalled with no argumentsTween:Cancel()table (nested)recursively cleaned
+```luau
+Instance :Destroy()
+RBXScriptConnection :Disconnect()
+thread task.cancel()
+function called with no arguments
+Tween :Cancel()
+table recursively cleaned
 
 # 📝 Notes
 
