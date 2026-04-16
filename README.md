@@ -37,6 +37,9 @@ local function setup(part)
 end
 ```
 
+Supported types:
+TypeAction on cleanupInstance:Destroy()RBXScriptConnection:Disconnect()threadtask.cancel()functioncalled with no argumentsTween:Cancel()table (nested)recursively cleaned
+
 # 📝 Notes
 
 Nested tables are supported: if you add a table, Soap will recursively clean its contents.
