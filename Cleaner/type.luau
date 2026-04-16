@@ -8,3 +8,4 @@ export type SoapObject = {
 }
 
 return Module
+
