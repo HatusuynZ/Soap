@@ -1,5 +1,3 @@
-```luau
-
 --!strict
 
 local Module = {}
