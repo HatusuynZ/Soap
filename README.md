@@ -39,12 +39,12 @@ end
 
 # Supported types:
 
-Instance :Destroy()
-RBXScriptConnection :Disconnect()
-thread task.cancel()
-function called with no arguments
-Tween :Cancel()
-table recursively cleaned
+Instance :Destroy() --
+RBXScriptConnection :Disconnect() --
+thread task.cancel() --
+function called with no arguments --
+Tween :Cancel() --
+table recursively cleaned --
 
 # 📝 Notes
 
