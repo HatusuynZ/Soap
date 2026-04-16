@@ -37,10 +37,19 @@ local function setup(part)
 end
 ```
 
-# Supported types:
+## 📖 Supported Types
 
-Instance :Destroy() --
-RBXScriptConnection :Disconnect() --
+| Type | Action |
+|---|---|
+| `Instance` | `:Destroy()` |
+| `RBXScriptConnection` | `:Disconnect()` |
+| `thread` | `task.cancel()` |
+| `function` | called with no arguments |
+| `Tween` | `:Cancel()` |
+| `table` (nested) | recursively cleaned |
+
+Instance :Destroy()
+RBXScriptConnection
 thread task.cancel() --
 function called with no arguments --
 Tween :Cancel() --
