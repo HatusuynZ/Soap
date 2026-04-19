@@ -1,8 +1,14 @@
-local types = require(script.type)
+
+
+local types = require(script.Type)
 
 local Module = {}
 local Api = {}
 Api.__index = Api
+
+local function isSoap(t)
+	return typeof(t) == "table" and typeof(t.Cleanup) == "function"
+end
 
 local function isSafeTable(t)
 	return typeof(t) == "table" and getmetatable(t) == nil
@@ -21,6 +27,8 @@ local function clean(t)
 			remove()
 		elseif valueType == "Tween" then
 			remove:Cancel()
+		elseif isSoap(remove) then 
+			remove:Destroy()
 		elseif isSafeTable(remove) then
 			clean(remove)
 		end
@@ -56,8 +64,8 @@ end
 export type SoapObject = typeof(setmetatable({}, Api))
 
 function Module.New()
-    local self = setmetatable({}, Api)
-    return self :: types.SoapObject 
+	local self = setmetatable({}, Api)
+	return self :: types.SoapObject 
 end
 
 return Module
